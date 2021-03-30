@@ -1,0 +1,11 @@
+###
+GET http://localhost:3000/jogo/listar
+
+###
+POST http://localhost:3000/jogo/cadastrar
+Content-Type: application/json
+
+{
+    "titulo": "Valorant",
+    "genero": "FPS"
+}
