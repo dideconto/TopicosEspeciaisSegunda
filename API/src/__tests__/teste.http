@@ -1,8 +1,11 @@
 ###
-GET http://localhost:3000/jogo/listar
+GET http://localhost:3000/ciclo/listar
 
 ###
-POST http://localhost:3000/jogo/cadastrar
+GET http://localhost:3000/ciclo/listar/1/2/3
+
+###
+POST http://localhost:3000/ciclo/cadastrar
 Content-Type: application/json
 
 {
