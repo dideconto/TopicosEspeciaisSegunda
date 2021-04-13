@@ -9,6 +9,5 @@ POST http://localhost:3000/ciclo/cadastrar
 Content-Type: application/json
 
 {
-    "titulo": "Valorant",
-    "genero": "FPS"
+    "data": "2021/04/12"
 }
