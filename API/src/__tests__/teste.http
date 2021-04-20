@@ -2,12 +2,57 @@
 GET http://localhost:3000/ciclo/listar
 
 ###
-GET http://localhost:3000/ciclo/listar/1/2/3
+GET http://localhost:3000/ciclo/listar/607e0fec7748563be0c3a28c
 
 ###
 POST http://localhost:3000/ciclo/cadastrar
 Content-Type: application/json
 
+# {
+#     "data": "2021/04/12",
+#     "creditos": [
+#         {
+#             "nome": "Salário",
+#             "valor": 5500
+#         },
+#         {
+#             "nome": "Investimento",
+#             "valor": 50
+#         }
+#     ],
+#     "debitos": [
+#         {
+#             "nome": "Luz",
+#             "valor": 350,
+#             "status": "PAGO"
+#         },
+#         {
+#             "nome": "Água",
+#             "valor": 120,
+#             "status": "PENDENTE"
+#         }
+#     ]
+# }
 {
-    "data": "2021/04/12"
+    "creditos": [
+        {
+            "nome": "Salário",
+            "valor": 5500
+        },
+        {
+            "valor": 50
+        }
+    ],
+    "debitos": [
+        {
+            "nome": "Luz",
+            "valor": 0.5,
+            "status": "PAGO"
+        },
+        {
+            "nome": "Água",
+            "valor": 120,
+            "status": "PENsadasdasDENTE"
+        }
+    ]
 }

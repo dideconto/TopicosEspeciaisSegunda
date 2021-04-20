@@ -8,7 +8,7 @@ const cicloSchema = new Schema(
       type: Date,
       required: [true, "O campo DATA é obrigatório!"],
     },
-    creditos: [creditoSchema],
+    creditos:[creditoSchema],
     debitos: [debitoSchema],
   },
   {

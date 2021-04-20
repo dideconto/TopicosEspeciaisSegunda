@@ -2,35 +2,32 @@ import { Request, Response } from "express";
 import CicloSchema from "../models/CicloSchema";
 
 class CicloController {
-  listar(request: Request, response: Response) {
-    const jogo = {
-      titulo: "CS",
-      plataforma: "PC",
-      valor: 50.99,
-      genero: "FPS",
-    };
-    response.json(jogo);
+  async listar(request: Request, response: Response) {
+    const ciclos = await CicloSchema.find();
+    response.status(200).json(ciclos);
   }
 
-  buscarPorId(request: Request, response: Response) {
-    console.log(request.params);
-    const { param1, param2, param3 } = request.params;
-    const jogo = {
-      titulo: "CS GO",
-      plataforma: "PC",
-      valor: 50.99,
-      genero: "FPS",
-      param1,
-      param2,
-      param3,
-    };
-    response.json(jogo);
+  async buscarPorId(request: Request, response: Response) {
+    const { id } = request.params;
+    const ciclo = await CicloSchema.find({ _id: id });
+    response.status(200).json(ciclo);
   }
 
-  cadastrar(request: Request, response: Response) {
-    const objeto = request.body;
-    CicloSchema.create(objeto);
-    response.json(objeto);
+  async cadastrar(request: Request, response: Response) {
+    try {
+      const novoCiclo = await CicloSchema.create(request.body);
+      response.status(201).json({
+        objeto: novoCiclo,
+        msg: "Ciclo cadastrado com sucesso",
+        erro: false
+      });
+    } catch (error) {
+      response.status(400).json({
+        objeto: error,
+        msg: "Falha na validação",
+        erro: true
+      });
+    }
   }
 }
 
