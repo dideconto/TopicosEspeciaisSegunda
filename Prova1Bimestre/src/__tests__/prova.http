@@ -1,0 +1,28 @@
+###
+POST http://localhost:1234/pessoa/cadastrar
+Content-Type: application/json
+
+{
+    "nome": "Diogo Deconto",
+    "cpf": "123456",
+    "idade": 321
+}
+
+###
+GET http://localhost:1234/pessoa/buscar/1234
+
+###
+GET http://localhost:1234/pessoa/listar
+
+###
+PUT http://localhost:1234/pessoa/alterar
+Content-Type: application/json
+
+{
+    "nome": "Diogo Steinke Deconto",
+    "cpf": "1234",
+    "idade": 321
+}
+
+###
+DELETE http://localhost:1234/pessoa/remover/1234
