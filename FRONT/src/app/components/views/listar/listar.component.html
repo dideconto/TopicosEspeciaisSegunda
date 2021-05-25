@@ -1,4 +1,11 @@
+<ul *ngFor="let ciclo of ciclos">
+    <li> {{ ciclo._id }} </li>
+</ul>
 
-<button (click)="incrementarContador()"> Incrementar </button>
+<select>
+    <option *ngFor="let ciclo of ciclos"> {{ ciclo._id }} </option>
+</select>
 
-{{ contador }}
+<div>
+    <div *ngFor="let ciclo of ciclos"></div>
+</div>
