@@ -1,10 +1,13 @@
-
-<label for="data">Data do Ciclo</label>
-<input type="text" name="data" [(ngModel)]="ciclo.data"/>
-
-<br/>
-<button (click)="cadastrar()">Cadastrar</button>
-
-<br/>
-<a routerLink=""> Listar Ciclos </a>
-
+<mat-card>
+  <mat-card-title> Novo Ciclo de pagamento </mat-card-title>
+  <mat-card-content>
+    <mat-form-field>
+      <mat-label for="data">Data do Ciclo</mat-label>
+      <input matInput placeholder="Digite a data do ciclo" type="month" name="data" [(ngModel)]="data" />
+    </mat-form-field>
+    <div class="actions">
+      <button mat-raised-button color="warn" (click)="cadastrar()">Cadastrar</button>
+      <a mat-stroked-button routerLink=""> Listar Ciclos </a>
+    </div>
+  </mat-card-content>
+</mat-card>

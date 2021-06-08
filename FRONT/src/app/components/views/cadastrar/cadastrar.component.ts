@@ -8,14 +8,18 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./cadastrar.component.css"],
 })
 export class CadastrarComponent implements OnInit {
-  ciclo: Ciclo = new Ciclo(); 
+  data!: string;
 
   constructor(private service: CicloService) {}
 
   ngOnInit(): void {}
 
   cadastrar(): void {
-    this.service.cadastrar(this.ciclo).subscribe((ciclo) => {
+    let data = new Date(this.data);
+    data.setHours(data.getHours() + 3);
+    let ciclo = new Ciclo();
+    ciclo.data = new Date(data);
+    this.service.cadastrar(ciclo).subscribe((ciclo) => {
       console.log(ciclo)      
     });
   }

@@ -1,4 +1,9 @@
 table{
+    margin-top: 16px;
     width: 100%;
     text-align: center;
+}
+
+mat-icon{
+    margin-right: 8px;
 }
