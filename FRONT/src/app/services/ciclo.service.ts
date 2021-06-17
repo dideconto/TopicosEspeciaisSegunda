@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Ciclo } from './../models/Ciclo';
+import { Ciclo } from '../models/Ciclo';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
